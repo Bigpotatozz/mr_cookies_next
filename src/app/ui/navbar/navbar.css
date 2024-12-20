@@ -1,0 +1,32 @@
+
+nav {
+    width: 20%;
+    height: 100vh;
+    background: #322C2B;
+    padding: 15px;
+   
+}
+ul{
+    margin: 0px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: white;
+    
+}
+.link{
+    padding: 15px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+li{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
