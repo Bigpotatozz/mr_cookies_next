@@ -1,10 +1,10 @@
 import Link from "next/link";
 import './navbar.css'
 const links = [
-    { name: 'ventas', href: '/', icon: 'pi pi-shopping-bag' },
-    { name: 'galletas', href: '/galletas', icon: 'pi pi-box'},
-    {name: 'insumos', href: '/insumos', icon: 'pi pi-th-large'},
-    {name: 'Produccion', href: '/produccion', icon: 'pi pi-upload'},
+    { name: 'Ventas', href: '/home/ventas', icon: 'pi pi-shopping-bag' },
+    { name: 'Inventario', href: '/home/inventario', icon: 'pi pi-box'},
+    {name: 'Insumos', href: '/home/insumos', icon: 'pi pi-th-large'},
+    {name: 'Produccion', href: '/home/produccion', icon: 'pi pi-upload'},
 
 ]
 

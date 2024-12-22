@@ -1,11 +1,9 @@
-import { Navbar } from "./ui/navbar/navbar";
-
-export default function Home() {
+export default function Inicio() {
   return (
     <>
-    
-      <Navbar></Navbar>
 
+
+        
     </>
   );
 }
