@@ -1,0 +1,19 @@
+
+.registro_venta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_container{
+    display: flex;
+    margin: 15px;
+}
+
+.botones{
+    margin: 15px;
+}
+
+.boton{
+    margin-right: 20px;
+}
