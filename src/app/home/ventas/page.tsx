@@ -11,23 +11,25 @@ export default function Ventas() {
     const [fechaInicio, setFechaInicio] = useState<Date | null>(null);
 
     const [fechaFin, setFechaFin] = useState<Date | null>(null);
+    const [buscador, setBuscador] = useState<string>('');
 
-    function changeDates(fechaInicio: Date, fechaFin: Date){
-
+    function changeDates(fechaInicio: Date | null, fechaFin: Date | null ){
         setFechaInicio(fechaInicio);
         setFechaFin(fechaFin);
     }
 
-    console.log(fechaInicio, fechaFin);
+    function buscar(busqueda: string){
+        setBuscador(busqueda);
+    }
 
     return (
         <>
 
             <div className="ventas_container">
 
-                <FormularioVentas changeDates={changeDates}></FormularioVentas>
+                <FormularioVentas changeDates={changeDates} buscar={buscar}></FormularioVentas>
 
-                <TablaVentas precio='' fecha_inicio={fechaInicio} fecha_fin={fechaFin}></TablaVentas>
+                <TablaVentas precio={`${buscador}`} fecha_inicio={fechaInicio} fecha_fin={fechaFin}></TablaVentas>
             </div>
 
         </>

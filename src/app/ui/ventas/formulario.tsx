@@ -5,39 +5,47 @@ import { InputText } from "primereact/inputtext";
 import { useState } from "react";
 
 
-export default function FormularioVentas({changeDates}) {
+interface FormularioVentasProps {
+    changeDates: (date1: Date | null, date2: Date | null) => void;
+    buscar: (busqueda: string) => void;
+}
 
-    const [value_buscador, setValueBuscador] = useState<string>('');
-    const [datetime12h, setDateTime12h] = useState<Date | null>(null);
-    const [datetime12h2, setDateTime12h2] = useState<Date | null>(null);
+export default function FormularioVentas({ changeDates, buscar }: FormularioVentasProps) {
+
+    const [date, setDate1] = useState<Date | null>(null);
+    const [date2, setDate2] = useState<Date | null>(null);
 
 
     function handleDateChange(){
-        changeDates(datetime12h, datetime12h2);
+        changeDates(date, date2);
     }
 
-
+    function clearDate(){
+        setDate1(null);
+        setDate2(null);
+        changeDates(null, null);
+    }
 
     return (
 
         <section className='registro_venta'>
             <div className='input_container'>
                 <p>Desde:</p>
-                <Calendar value={datetime12h} onChange={(e) => setDateTime12h(e.value || null)} showTime hourFormat="12" />
+                <Calendar value={date} onChange={(e) => setDate1(e.value ?? null)} dateFormat="dd/mm/yy" />
             </div>
 
             <div className='input_container'>
                 <p>Hasta:</p>
-                <Calendar value={datetime12h2} onChange={(e) => setDateTime12h2(e.value || null)} showTime hourFormat="12" />
+                <Calendar value={date2} onChange={(e) => setDate2(e.value ?? null)} dateFormat="dd/mm/yy" />
             </div>
 
             <div className="botones">
                 <Button className="boton" label="Filtrar" severity="info" outlined onClick={handleDateChange} />
 
-                <Button className = "boton" label="Limpiar" severity="secondary" outlined />
+                <Button className = "boton" label="Limpiar" severity="secondary" outlined onClick={clearDate} />
             </div>
 
-            <InputText value={value_buscador} onChange={(e) => setValueBuscador(e.target.value)} />
+            <InputText  onChange={(e) => buscar(e.target.value)} />
         </section>
     )
 }
