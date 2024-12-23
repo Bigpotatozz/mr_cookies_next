@@ -3,6 +3,8 @@ import TablaVentas from "@/app/ui/ventas/tabla";
 import '../../ui/ventas/ventas.css'
 import FormularioVentas from "@/app/ui/ventas/formulario";
 import { useState } from "react";
+import { Button } from "primereact/button";
+import Link from "next/link";
 
 
 export default function Ventas() {
@@ -25,6 +27,10 @@ export default function Ventas() {
     return (
         <>
 
+            <div className="ventas_header">
+                <h2>Ventas</h2>
+                <Link href={'./ventas/registrar_venta'}><Button label="Registrar venta" severity="success" /></Link>
+            </div>
             <div className="ventas_container">
 
                 <FormularioVentas changeDates={changeDates} buscar={buscar}></FormularioVentas>

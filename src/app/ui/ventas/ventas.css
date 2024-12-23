@@ -1,4 +1,12 @@
 
+.ventas_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+
 .registro_venta{
     display: flex;
     justify-content: center;
@@ -17,3 +25,4 @@
 .boton{
     margin-right: 20px;
 }
+
