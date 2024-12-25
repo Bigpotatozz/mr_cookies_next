@@ -1,7 +1,16 @@
-export default function Inventario(){
+import TablaInventario from "@/app/ui/inventario/tabla";
+
+export default function Inventario() {
     return (
         <div>
-            <h1>Inventario</h1>
+
+            <div className="header">
+                <h1>Inventario de galletas</h1>
+                
+            </div>
+
+
+            <TablaInventario></TablaInventario>
         </div>
     )
 }

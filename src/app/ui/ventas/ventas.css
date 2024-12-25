@@ -26,3 +26,27 @@
     margin-right: 20px;
 }
 
+
+.bottom_form{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.imprimir_ticket{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+.imprimir_ticket p{
+    margin-left: 5px;
+}
+
+.button_bottom_form{
+    margin: 10px;
+}
+
+
+.formulario_registro_venta_container{
+    margin: 10px;
+}

@@ -3,6 +3,7 @@ import { Button } from "primereact/button";
 import { Calendar } from "primereact/calendar";
 import { InputText } from "primereact/inputtext";
 import { useState } from "react";
+import '../ventas/ventas.css'
 
 
 interface FormularioVentasProps {
